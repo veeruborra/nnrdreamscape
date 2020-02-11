@@ -1,0 +1,712 @@
+.logo-outer{
+    position: absolute;
+    width: 174px;
+    height: 71px;
+    font-family: 'Circular', sans-serif;
+    text-align: left;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: .03rem;
+    margin: 40px 0 0 50px;
+ }
+
+
+ .main-button{
+    cursor: pointer;  
+    z-index: 4;
+    margin-top: 0;
+  }
+  .main-buttonPage{
+    cursor: pointer;  
+    position: fixed;
+    top: 40px;
+    right: 35px;
+    overflow: hidden;
+  }
+  .hideButton {
+    height: 0;
+    opacity: 0;
+    transition: 1s all ease;
+  }
+  .hamburger{
+    height:12px;
+    width: 19px;
+    z-index: 3;
+  }
+  .bar{
+    height: 2px;
+    width: 19px;
+    background: #171719;
+    margin-bottom: 3px;
+  }
+  .hamTransNorm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:12px;
+    width: 19px;
+    z-index: 3;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .hamTrans {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    margin-top: 0px;
+    animation-name: hamShrink;
+    animation-duration: 4s;
+    animation-fill-mode: ease-in-out;
+    animation-iteration-count: initial;
+  }
+  @keyframes hamShrink {
+    0% {
+      margin-bottom: 10px;
+    }
+    15% {
+      margin-bottom: 0px;
+    }
+  
+    100% {
+      margin-bottom: 0px;
+    }
+  }
+  
+  .barLeftAnimatIn {
+    position: absolute;
+    height: 2px;
+    width: 19px;
+    /* margin-top: 10px; */
+    animation-name: barLeftShrink;
+    margin-right: 10px;
+    animation-duration: 1.5s;
+    animation-fill-mode: ease-in-out;
+    /* animation-iteration-count: infinite; */
+    animation-iteration-count: initial;
+    /* animation-fill-mode: ease; */
+   background: #171719;
+  }
+  .barMiddleAnimatIn {
+    position: absolute;
+    height: 2px;
+    width: 19px;
+    /* margin-right: 30px; */
+    margin-right: 10px;
+    /* margin-left: 30px; */
+    background: #171719;
+    animation-name: barMidGone;
+    animation-duration: 1.5s;
+    animation-fill-mode: ease-in-out;
+    /* animation-iteration-count: infinite; */
+    animation-iteration-count: initial;
+  
+  }
+  .barRightAnimatIn {
+    position: absolute;
+    height: 2px;
+    width: 19px;
+    margin-right: 60px;
+    /* margin-top: 5px; */
+    background: #171719;
+    animation-name: barRightShrink;
+    animation-duration: 1.5s;
+    animation-fill-mode: ease-in-out;
+    /* animation-iteration-count: infinite; */
+    animation-iteration-count: initial;
+  
+  }
+  
+  @keyframes barLeftShrink {
+    0%{
+      margin-top: 10px;
+    }
+    25%{
+      margin-top: 0px;
+    }
+    35%{
+      margin-top: 0px;
+      transform: rotate(10deg);
+    }
+    100%{
+      margin-top: 0px;
+      transform: rotate(45deg);
+    }
+  }
+  @keyframes barMidGone {
+    0%{
+      opacity: 1;
+      /* margin-top: 10px; */
+    }
+    25%{
+      /* margin-top: 0px; */
+      opacity: 0;
+      /* transform: rotate(10deg); */
+    }
+    100%{
+      opacity: 0;
+    }
+  }
+  @keyframes barRightShrink {
+    0%{
+      margin-top: 5px;
+    }
+    25%{
+      margin-top: 0px;
+    }
+    35%{
+      margin-top: 0px;
+      transform: rotate(-10deg);
+    }
+  /* 
+    50%{
+      margin-top: 0px;
+      transform: rotate(-10deg);
+    }
+    75%{
+      margin-top: 0px;
+      transform: rotate(-10deg);
+    } */
+    100%{
+      margin-top: 0px;
+      transform: rotate(-45deg);
+    }
+  }
+  
+  .hamTransOut {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: white; */
+    /* position: absolute; */
+    /* height:12px; */
+    /* width: 19px; */
+    z-index: 80;
+    /* margin-right: 20px; */
+    /* margin-left: 20px; */
+    margin-top: 0px;
+    /* margin-bottom: 10px; */
+    animation-name: hamExpand;
+    animation-duration: 2.2s;
+    animation-fill-mode: ease-in-out;
+    /* animation-iteration-count: infinite; */
+    animation-iteration-count: initial;
+  
+  
+    
+  }
+  @keyframes hamExpand {
+    0% {
+      margin-bottom: 0px;
+    }
+    50% {
+      margin-bottom: 10px;
+    }
+  
+    100% {
+      margin-bottom: 10px;
+    }
+  }
+  
+  .barLeftAnimatOut {
+    position: absolute;
+    height: 2px;
+    width: 19px;
+    /* margin-top: 10px; */
+    animation-name: barLeftExpand;
+    margin-right: 10px;
+    animation-duration: 2.2s;
+    animation-fill-mode: ease-in-out;
+    /* animation-iteration-count: infinite; */
+    animation-iteration-count: initial;
+    /* animation-fill-mode: ease; */
+   background: #171719;
+   z-index: 21;
+  }
+  .barMiddleAnimatOut {
+    position: absolute;
+    height: 2px;
+    width: 19px;
+    /* margin-right: 30px; */
+    margin-right: 10px;
+    /* margin-left: 30px; */
+    background: #171719;
+    animation-name: barMidHello;
+    animation-duration: 2.2s;
+    animation-fill-mode: ease-in-out;
+    /* animation-iteration-count: infinite; */
+    animation-iteration-count: initial;
+    z-index: 21;
+  
+  }
+  .barRightAnimatOut {
+    position: absolute;
+    height: 2px;
+    width: 19px;
+    margin-right: 60px;
+    /* margin-top: 5px; */
+    background: #171719;
+    animation-name: barRightExpand;
+    animation-duration: 2.2s;
+    animation-fill-mode: ease-in-out;
+    /* animation-iteration-count: infinite; */
+    animation-iteration-count: initial;
+    z-index: 21;
+  }
+  
+  @keyframes barLeftExpand {
+    0%{
+      margin-top: 0px;
+      transform: rotate(45deg);
+    }
+    50%{
+      margin-top: 0px;
+      transform: rotate(0deg);
+    }
+    65%{
+      margin-top: 10px;
+      transform: rotate(0deg);
+    }
+    
+    /* 50%{
+      margin-top: 0px;
+      transform: rotate(25deg);
+    }
+    75%{
+      margin-top: 0px;
+      transform: rotate(10deg);
+    } */
+    100%{
+      margin-top: 10px;
+      transform: rotate(0deg);
+    }
+  }
+  @keyframes barMidHello {
+    0%{
+      opacity: 0;
+      /* margin-top: 10px; */
+    }
+    50%{
+      /* margin-top: 0px; */
+      opacity: 1;
+      /* transform: rotate(10deg); */
+    }
+    
+    /* 50%{
+      margin-top: 0px;
+      transform: rotate(25deg);
+    }
+    75%{
+      margin-top: 0px;
+      transform: rotate(10deg);
+    } */
+    100%{
+      opacity: 1;
+    }
+  }
+  @keyframes barRightExpand {
+    0%{
+      margin-top: 0px;
+      transform: rotate(-45deg);
+    }
+    50%{
+      margin-top: 0px;
+      transform: rotate(0deg);
+    }
+    65%{
+      margin-top: 5px;
+      transform: rotate(0deg);
+    }
+  /* 
+    50%{
+      margin-top: 0px;
+      transform: rotate(-10deg);
+    }
+    75%{
+      margin-top: 0px;
+      transform: rotate(-10deg);
+    } */
+    100%{
+      margin-top: 5px;
+      transform: rotate(0deg);
+    }
+  }
+  
+  
+  
+  .barLeft {
+    /* display: static; */
+    position: absolute;
+    height: 2px;
+    width: 19px;
+    background: #171719;
+    transform: rotate(45deg);
+    /* margin-bottom: 3px; */
+  }
+  .barMiddle {
+    /* display: static; */
+    position: absolute;
+    height: 2px;
+    width: 19px;
+    background: #171719;
+    /* background: green; */
+    opacity: 0;
+    /* margin-bottom: 3px; */
+  }
+  .barRight {
+    /* display: static; */
+    position: absolute;
+    height: 2px;
+    width: 19px;
+    background: #171719;
+    /* background: pink; */
+    transform: rotate(135deg);
+    /* margin-bottom: 3px; */
+  }
+  
+  .circle{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fbf9f6;
+    z-index: 6;
+    -webkit-transition: -webkit-transform .1s ease-in-out;
+           transition:         transform .1s ease-in-out;
+  }
+  .circle:hover {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  
+  }
+  
+  .button-slide {
+    color: transparent;
+  }
+  
+  .button-slide:hover {
+    background: black;
+    color: white;
+    overflow: hidden;
+    transition: 1s all ease;
+  }
+  
+  .popOutBox {
+    overflow: hidden;
+    position: fixed;
+    top: 40px;
+    /* white-space: nowrap; */
+    right: 50px;
+    height: 45px;
+    /* width: 120px; */
+    width: 0px;
+    z-index: -1;
+    transition: 0.5s all ease;
+    /* background: green; */
+    border-radius: 45px;
+    /* opacity: 0; */
+  }
+  
+  .popOutBox_inner {
+    transition: 0.5s all ease;
+    /* width: 0px; */
+    height: 45px;
+    /* white-space: nowrap; */
+    background-color: rgba(0,0,0,.22);
+    /* transform: translateX(-100%); */
+    /* transition: .4s transform cubic-bezier(.19,1,.22,1),.4s background-color ease; */
+    font-weight: 400;
+    /* z-index: 2; */
+    padding: 13px 55px 14px 25px;
+    font-family: Circular, sans-serif;
+    font-size: 1rem;
+    color: #fff;
+  }
+  
+  .main-buttonPage:hover .popOutBox{
+    /* white-space: nowrap; */
+    /* opacity: 1; */
+    transition: 0.5s all ease;
+    width: 110px;
+    /* z-index: 2; */
+    /* width: 0px; */
+    /* position: static; */
+    /* overflow: auto; */
+    /* z-index: 4; */
+    /* transform: translateX(-100%); */
+  }
+  .main-button:hover .popOutBox{
+    /* white-space: nowrap; */
+    /* opacity: 1; */
+    transition: 0.5s all ease;
+    width: 110px;
+    /* width: 0px; */
+    /* position: static; */
+    /* overflow: auto; */
+    /* z-index: -1; */
+    /* transform: translateX(-100%); */
+  }
+
+
+
+  .navbar{
+    width: 100%;
+   /* height: 100%;  */
+   position: fixed; 
+   z-index: 2;
+   
+   }
+   
+   .menuOn{
+       height: 100%;
+   }
+
+   
+   @import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500');
+ 
+.hide{ /* This is an animation applied to the hide object, so that the hide when being used will not stop the outgoing animations. */
+    animation-name: slowerHeightHide;
+    animation-duration: 2.01s;
+    animation-fill-mode: ease;
+    animation-iteration-count: initial;
+}
+@keyframes slowerHeightHide { /* Until a millisecond before the animation cycle is complete, the height of the menu will remain the same during the output animation. */
+    0% {
+        height: 100vh;
+    }
+    99% {
+        height: 100vh;
+    }
+    100% {
+        height: 0vh;       
+    }
+}
+.menu{ /* This is the main menu prop that is passed down with hide into the menu.js page. It is referenced in both the MainButton.js and Menu.js */
+    font-family: 'Circular', sans-serif;
+    font-weight: 100;
+    font-size: 1rem;
+    letter-spacing: .03rem;
+    overflow: hidden;
+    transition: 1s all ease;
+    text-align: left;
+    display: flex;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    color: #fbf9f6;
+    z-index: 2;
+    
+}
+.menu h1{ /* This manipulates any h1 tags in the menu class. */
+    font-size: 3.75rem;
+    font-weight: 550;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    top: 14px;
+} 
+.flexRMen { /* This is a subclass I made but may not be used right now. TODO: Could be deleted potentially if not being used.  */
+    display: flex;
+    flex-direction: row;
+}
+.menu-bar{ /* The first panel on the left of the menu */
+    height: 100vh;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+    align-items: center;
+    min-width: 33%;
+}
+
+.menu-text{ /* Text sizing using throughout all menu text */
+    height: 80px;
+    max-width: 300px;
+    line-height: 1.5rem;
+}
+.outerMenuThirdBox { /* This is a div that is included so that when collapsing width on the animated div, the animated div will stay in the location that it's supposed to and not 'accordian' out. */
+    width: 33.333333vw; 
+    height: 100vh; 
+    background: transparent;
+}
+.cases{ 
+    background-color:#1F1F21;
+    height: 100vh;
+    width: 33.333333vw;
+    overflow: hidden;
+}
+.enter {
+    float: left;
+}
+.leave {
+    float: right;
+}
+.slideInMenu {
+    animation-name: slideInToRight;
+    animation-duration: 2s;
+    animation-fill-mode: ease;
+    animation-iteration-count: initial;
+}
+.slideOutMenu {
+    animation-name: slideOutToRight;
+    animation-duration: 2s;
+    animation-fill-mode: ease;
+    animation-iteration-count: initial;
+}
+@keyframes slideInToRight {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+@keyframes slideOutToRight {
+    0% {
+        width: 100%;
+    }
+    100% {
+        width: 0%;
+    }
+}
+.menu-about{
+    background-color:#171718;
+    height: 100vh;
+    width: 33.333333vw;
+    overflow: hidden;
+}
+.contact{
+    background-color:#000000;
+    height: 100vh;
+    width: 33.3333333vw;
+    overflow: hidden;
+}
+.main-button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 40px 35px 0 0;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;  
+}
+.underline {
+    display: inline;
+    position: relative;
+    overflow: hidden;
+    z-index: 3;
+}
+.underline:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 100%;
+    bottom: -2px;
+    background: #fbf9f6;
+    height: 1.45px;
+    transition-property: left right;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+}
+.underline:hover:after,
+.underline:focus:after,
+.underline:active:after {
+  right: 0;
+}
+.h1ContainerMenu {
+    height: 80px;
+    overflow: hidden;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.text-expand {
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.5s all ease;
+}
+.menu-bar:hover .h1Con  {
+    animation: peekaSlide;
+    animation-duration: 0.4s;
+    animation-play-state: inherit;
+}
+.menu-bar:hover:focus:after .h1Con:hover:focus:after  {
+    animation: peekaSlideReverse;
+    animation-duration: 0.4s;
+    animation-play-state: initial;
+}
+@keyframes peekaSlide {
+ 0% {
+    top: 14px;
+}
+25% {
+    top: 100px;
+    left: 0px;
+}
+30% {
+    top: 100px;
+    left: 300px;
+}
+40% {
+    top: -100px;
+    left: 300px;
+}
+60% {
+    top: -100px;
+    left: 0px;
+}
+100% {
+    top: 14px;
+    left: 0px;
+ }
+}
+@keyframes peekaSlideReverse {
+    0% {
+        top: 14px;
+        left: 0px;
+    }
+     25%{
+         top: 100px;
+         left: 300px;
+    }
+     30% {
+         top: -100px;
+         left: 300px;
+    }
+     40% {
+         top: -100px;
+         left: 0px;
+    }
+     60% {
+         top: 100px;
+         left: 0px;
+    }
+    100% {
+        top: 14px;
+    }
+}
+.menu-bar:hover,
+.menu-bar:focus .h1ContainMenu .h1Con {
+    transform: translateY(-120px);
+
+}
+.menu-bar:hover .text-expand {
+    height: 120px;
+    transform: translateY(-20px);
+    transition: 1s all ease;
+    opacity: 1;
+}
+.menu-bar:hover:after .h1ContainMenu .h1Con {
+    transition: 1s ease all;
+    transform: translateY(0px);
+}
+.boldPTag {
+    font-weight: bold;
+}
