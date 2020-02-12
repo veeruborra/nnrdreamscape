@@ -1,3 +1,28 @@
-<div className="caseCreator">
-
+<div class="caseCreator">
+<div class='topAreaMain'>
+  <div class='topBgPicTitleArea'>
+</div>
+</div>
+<!-- [ngStyle]="{'background': leftColor[case.case_id - 1])}"
+[ngStyle]="{'background': (rightColor[case.case_id - 1])}" -->
+            <div class='secondTopAreaMain'>
+            <div class='secondLeftTop' >
+                <blockquote class='topQuoteBlockStyle'>{case.blurb}</blockquote>
+              </div>
+            <div class='secondRightTop' >
+                <div class='secondRightInnerTop'>
+                  <div class='innerInnerTop'>
+                    <h3>Awards & Recognition</h3>
+                    <p>{{case.award_blurb}}</p>
+                    <br />
+                    <h3>Deliverables</h3>
+                    <p>{{case.deliverables}}</p>
+                    <br />
+                    <h3>Visit site</h3>
+                    <a class='aTagStyle undy' href="{{case.link_url}}" target="_blank"
+                      rel="noopener noreferrer">{{case.link_url}}</a>
+                  </div>
+                </div>
+              </div>
+            </div>
 </div>
