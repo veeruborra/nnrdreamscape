@@ -9,9 +9,9 @@
     <div class = "nav-right" (click)="setMenuOn()">
         
         <div>
-            <div class="main-buttonPage " >
+            <div class="main-buttonPage {{ !menuAppear ? 'main-buttonPage' : 'main-buttonPage hideButton'}}" >
                 <div
-                    class="circle"
+                    class="circle" (click)="toggleMenu()"
                   >
                     <div class="hamburger">
                         <div class="bar"></div>
@@ -27,18 +27,25 @@
             </div>
             <div></div>
          
-            <div class="menu ">
+            <div class="{{menuAppear ? 'menu' : 'menu hide'}} " (click)="toggleMenu()">
 
                 <div class="main-button" >
                     <div
                         class="circle"
                     >
-                        <div class='hamTransOut '>
-                            <div class='barLeftAnimatOut '></div>
-                            <div class='barMiddleAnimatOut'></div>
-                            <div class='barRightAnimatOut '></div>
+                        <div class="{{showGoOut ? 'hamTransOut ' : ''}}">
+                            <div class="{{showGoOut ? 'barLeftAnimatOut ' : ''}}"></div>
+                            <div class="{{showGoOut ? 'barMiddleAnimatOut ' : ''}}"></div>
+                            <div class="{{showGoOut ? 'barRightAnimatOut ' : ''}}"></div>
+                            
                         </div>
-                      "asd"
+                        <div class="{{show ? 'hamTransOut ' : ''}}"  *ngIf="!showGoOut">
+                            <div class="{{show ? 'barLeftAnimatOut ' : ''}}"></div>
+                            <div class="{{show ? 'barMiddleAnimatOut ' : ''}}"></div>
+                            <div class="{{show ? 'barRightAnimatOut ' : ''}}"></div>
+                            
+                        </div>
+                  
 
                     </div>
                     <div class='popOutBox' >
@@ -50,7 +57,7 @@
                 <div class='outerMenuThirdBox'>
                     <a href="/" style="textDecoration: none; color: #fbf9f6">
                         <div
-                            class='cases enter slideInMenu'
+                            class="{{menuAppear ? 'cases enter slideInMenu' : 'cases leave slideOutMenu'}}"
                         >
                             <div class="menu-bar">
                                 <div class="menu-text">
@@ -69,7 +76,7 @@
                 <div class='outerMenuThirdBox'>
                     <a href="/about" style="textDecoration: none; color: #fbf9f6" >
                         <div
-                            class="menu-about enter slideInMenu"
+                            class="{{menuAppear ? 'menu-about enter slideInMenu' : 'menu-about leave slideOutMenu'}}"
                         >
                             <div class="menu-bar">
                                 <div class="menu-text">
@@ -90,7 +97,7 @@
                 <div class='outerMenuThirdBox'>
                     <a href="/contact" style="textDecoration: none; color: #fbf9f6">
                         <div
-                            class="contact enter slideInMenu"
+                            class="{{menuAppear ? 'contact enter slideInMenu' : 'contact leave slideOutMenu'}}"
                         >
                             <div class="menu-bar">
                                 <div class="menu-text">
