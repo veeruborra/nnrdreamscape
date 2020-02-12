@@ -21,9 +21,29 @@ export class HeaderComponent implements OnInit {
   }
   toggleMenu(){
      this.menuAppear = !this.menuAppear;
+     this.animateMenu();
   }
   toggleShowGoOut(){
      this.showGoOut = !this.showGoOut;
+  }
+   toggleShow(){
+     this.show = !this.show;
+  }
+
+  animateMenu(){
+     if (this.menuAppear) {
+        // console.log('go in')
+        this.toggleShow();
+        setTimeout(() => {
+           this.toggleShow();
+        }, 1500);
+     } else {
+        // console.log('go out')
+        this.toggleShowGoOut();
+        setTimeout(() => {
+           this.toggleShowGoOut();
+        }, 2002);
+     }
   }
   
 }

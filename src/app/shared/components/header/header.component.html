@@ -2,7 +2,7 @@
     <div class = "nav-left">
         <div class="logo-outer" >
             <div> 
-            <a href="/" style="textDecoration: none; color:#171719;">Build <br/>in Amsterdam.</a>
+            <a routerLink="/" style="textDecoration: none; color:#171719;">Build <br/>in Amsterdam.</a>
             </div>
         </div>
     </div>
@@ -10,9 +10,7 @@
         
         <div>
             <div class="main-buttonPage {{ !menuAppear ? 'main-buttonPage' : 'main-buttonPage hideButton'}}" >
-                <div
-                    class="circle" (click)="toggleMenu()"
-                  >
+                <div class="circle" (click)="toggleMenu()" >
                     <div class="hamburger">
                         <div class="bar"></div>
                         <div class="bar"></div>
@@ -30,19 +28,17 @@
             <div class="{{menuAppear ? 'menu' : 'menu hide'}} " (click)="toggleMenu()">
 
                 <div class="main-button" >
-                    <div
-                        class="circle"
-                    >
+                    <div class="circle">
                         <div class="{{showGoOut ? 'hamTransOut ' : ''}}">
                             <div class="{{showGoOut ? 'barLeftAnimatOut ' : ''}}"></div>
                             <div class="{{showGoOut ? 'barMiddleAnimatOut ' : ''}}"></div>
                             <div class="{{showGoOut ? 'barRightAnimatOut ' : ''}}"></div>
                             
                         </div>
-                        <div class="{{show ? 'hamTransOut ' : ''}}"  *ngIf="!showGoOut">
-                            <div class="{{show ? 'barLeftAnimatOut ' : ''}}"></div>
-                            <div class="{{show ? 'barMiddleAnimatOut ' : ''}}"></div>
-                            <div class="{{show ? 'barRightAnimatOut ' : ''}}"></div>
+                        <div class="{{show ? 'hamTrans ' : 'hamTransNorm'}}"  *ngIf="!showGoOut">
+                            <div class="{{show ? 'barLeftAnimatIn ' : 'barLeft'}}"></div>
+                            <div class="{{show ? 'barMiddleAnimatIn ' : 'barMiddle'}}"></div>
+                            <div class="{{show ? 'barRightAnimatIn ' : 'barRight'}}"></div>
                             
                         </div>
                   
@@ -55,10 +51,8 @@
                     </div>
                 </div>
                 <div class='outerMenuThirdBox'>
-                    <a href="/" style="textDecoration: none; color: #fbf9f6">
-                        <div
-                            class="{{menuAppear ? 'cases enter slideInMenu' : 'cases leave slideOutMenu'}}"
-                        >
+                    <a routerLink="/cases" style="textDecoration: none; color: #fbf9f6">
+                        <div class="{{menuAppear ? 'cases enter slideInMenu' : 'cases leave slideOutMenu'}}">
                             <div class="menu-bar">
                                 <div class="menu-text">
                                     <div class='h1ContainerMenu' >
@@ -74,7 +68,7 @@
                     </a>
                 </div>
                 <div class='outerMenuThirdBox'>
-                    <a href="/about" style="textDecoration: none; color: #fbf9f6" >
+                    <a routerLink="/about" style="textDecoration: none; color: #fbf9f6" >
                         <div
                             class="{{menuAppear ? 'menu-about enter slideInMenu' : 'menu-about leave slideOutMenu'}}"
                         >
@@ -95,7 +89,7 @@
                     </a>
                 </div>
                 <div class='outerMenuThirdBox'>
-                    <a href="/contact" style="textDecoration: none; color: #fbf9f6">
+                    <a routerLink="/contact" style="textDecoration: none; color: #fbf9f6">
                         <div
                             class="{{menuAppear ? 'contact enter slideInMenu' : 'contact leave slideOutMenu'}}"
                         >

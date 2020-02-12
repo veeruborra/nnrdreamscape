@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CasesService } from './../shared/services/cases.service';
 
 @Component({
   selector: 'app-cases',
@@ -6,10 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cases.component.scss']
 })
 export class CasesComponent implements OnInit {
-
-  constructor() { }
+   cases: any = [];
+  constructor(private caseService: CasesService) { }
 
   ngOnInit() {
+    this.caseService.getCases().subscribe(
+      (data) => {
+        console.log(data);
+        this.cases = data;
+      },
+      (error) => {
+        console.log(error);
+       }
+    );
   }
 
 }

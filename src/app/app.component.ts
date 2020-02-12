@@ -8,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
   title = 'angReact';
   show = true;
+  show1 = true;
   ngOnInit(){
     setTimeout(()=>{
         this.show = false;
-    },4700);
+    },4600);
+    setTimeout(()=>{
+        this.show1 = false;
+    },3000);
   }
 }

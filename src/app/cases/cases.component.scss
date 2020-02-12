@@ -56,6 +56,16 @@
     font-size: 20px;
 }
 
+.case_item.rotateText .case_header{
+    transform: rotate(-90deg);
+    top: 35%;
+    margin-left: 6rem;
+}
+
+.case_item.rotateText .case_header .blurb,.case_item.rotateText .case_header p{
+    display: none;
+}
+
 .blurb {
     overflow: hidden;
     height: 0px;
@@ -483,4 +493,13 @@ width: 33vw;
 
 .arrow_svg {
     transform: matrix(1,0,0,1,0,0)
+}
+
+
+
+.caseCreator > div {
+
+    display: flex !important;
+    flex-wrap: wrap;
+    
 }

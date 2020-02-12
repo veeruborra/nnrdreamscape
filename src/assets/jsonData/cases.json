@@ -1,0 +1,37 @@
+[
+  { 
+                "id": 1, 
+                "case_id": "1",
+                "title":"veeru",
+                "subtitle": "New Subtitle",
+                "brand": "New Brand",
+                "blurb": "default",
+                "award_blurb": "default",
+                "deliverables": "default",
+                "link_url": "default",
+                    "background_url": "plots.jpeg"
+  },
+  {
+                    "id": 2,
+                    "case_id": "2",
+                    "title": "veeru",
+                    "subtitle": "New Subtitle",
+                    "brand": "New Brand",
+                    "blurb": "default",
+                    "award_blurb": "default",
+                    "deliverables": "default",
+                    "link_url": "default",
+                    "background_url": "MENDO_Collage_v2.jpg"
+  },
+  {
+                    "id": 3,
+                    "case_id": "3",
+                    "title": "veeru",
+                    "subtitle": "New Subtitle",
+                    "brand": "New Brand",
+                    "blurb": "default",
+                    "award_blurb": "default",
+                    "deliverables": "default",
+                    "link_url": "default",
+                    "background_url": "123.jpg"
+  }]
