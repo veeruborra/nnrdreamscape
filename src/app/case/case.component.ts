@@ -9,7 +9,7 @@ import { switchMap } from 'rxjs/operators';
 })
 export class CaseComponent implements OnInit {
   case: any = {};
-    bgImageUrl = "";
+    bgImageUrl = "plots.jpeg";
     leftColor = ['', '', '', '', '', '', '', '', '', '', '', '', '']
     rightColor =[
     'rgb(252, 228, 115)', 
@@ -25,7 +25,7 @@ export class CaseComponent implements OnInit {
     'rgb(202, 199, 186)', 
     'rgb(217, 224, 226)', 
     'rgb(217, 224, 226)']
-    breakUp = '';
+    breakUp: Array<''> = [];
     firstPart = '';
     secondPart = '';
   constructor(
@@ -42,6 +42,10 @@ export class CaseComponent implements OnInit {
           this.case = data['0'];
           this.bgImageUrl = this.case.background_url;
           console.log(this.case);
+            this.breakUp = this.case.title.split(' ');
+            this.firstPart = this.breakUp.splice(0, this.breakUp.length - 1).join(' ');
+            this.secondPart = this.breakUp.splice(this.breakUp.length - 1, 1).join(' ');
+        
         },
         (error) => console.log(error)
       )

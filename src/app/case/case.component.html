@@ -1,15 +1,31 @@
 <div class="caseCreator">
 <div class='topAreaMain'>
   <div class='topBgPicTitleArea'>
+    <ng-parallax
+    class='parallaxTopArea parDiv'
+    img="/assets/casesImg/{{bgImageUrl}}"
+>
+    <span class='span1' >
+        <div class='topTitleText slideUpTopArea'>
+            {{firstPart}}
+        </div>
+    </span>
+    <span class='span2' >
+        <div class='topTitleText2 slideUpTopArea2'>
+            {{(secondPart)}}
+        </div>
+    </span>
+    <div style="height: 78vh; width: 100vw"></div>
+</ng-parallax>
 </div>
-</div>
-<!-- [ngStyle]="{'background': leftColor[case.case_id - 1])}"
-[ngStyle]="{'background': (rightColor[case.case_id - 1])}" -->
+
+
+
             <div class='secondTopAreaMain'>
-            <div class='secondLeftTop' >
-                <blockquote class='topQuoteBlockStyle'>{case.blurb}</blockquote>
+            <div class='secondLeftTop' [ngStyle]="{'background': (leftColor[case.case_id - 1]) }">
+                <blockquote class='topQuoteBlockStyle'>{{case.blurb}}</blockquote>
               </div>
-            <div class='secondRightTop' >
+            <div class='secondRightTop' [ngStyle]="{'background': (rightColor[case.case_id - 1])}">
                 <div class='secondRightInnerTop'>
                   <div class='innerInnerTop'>
                     <h3>Awards & Recognition</h3>
@@ -25,4 +41,5 @@
                 </div>
               </div>
             </div>
+</div>
 </div>
