@@ -30,13 +30,13 @@
 } 
 
 .case_header {
-    height: 300px;
+    height: 180px;
     width: 400px;
     color: white;
     text-align: left;
     letter-spacing: .03em;
     position: absolute;
-    top: 62%;
+    top: 55%;
     margin-left: 3rem;
     font-family: 'Circular', sans-serif;
     font-weight: 100;
@@ -55,15 +55,34 @@
     font-weight: bold;
     font-size: 20px;
 }
-
-.case_item.rotateText .case_header{
-    transform: rotate(-90deg);
-    top: 35%;
-    margin-left: 6rem;
+.case_parent .content {
+    width: 33%;
 }
-
-.case_item.rotateText .case_header .blurb,.case_item.rotateText .case_header p{
-    display: none;
+// .rotateText.content {
+//     width: 33.33% !important;
+//     position: relative;
+// }
+// .content {
+//     // width: 80% !important;
+//     // position: absolute;
+// }
+.rotateText .case_item .case_header{
+    transform: rotate(-90deg);
+    bottom: 10%;
+    // margin-left: 6rem;
+    margin-left: 0;
+    width: 100px;
+    height: 100px;
+    //  right: 2%;
+}
+.rotateText .case_item{
+    // position: relative;
+}
+.rotateText .case_item .case_header .blurb,.rotateText .case_item .case_header .blurb h5,.rotateText .case_item .case_header p{
+    // display: none;
+    height: 0px;
+    width: 0px;
+    opacity: 0;
 }
 
 .blurb {
@@ -76,7 +95,7 @@
 
 .content:hover .case_header {
     transition: 0.5s all ease;
-    top: 54%;
+    top: 40%;
     margin-bottom: 0;
     /* transform: matrix(1,0,0,1,0,0); */
     /* transform: translate(-20) ease;  */
@@ -95,7 +114,7 @@
 
 .images {
   position: relative;
-  width: 33.333vw;
+  width: 100%;
   height: 100vh;
   overflow: hidden;
   /* display: flex;
@@ -111,15 +130,12 @@
        /* margin-right: -150px; */
     /* display: flex; */
 }
-.images0{
-
+/* .images0{
     text-indent: -47%;
-    
 }
 .images1{
     text-indent: -17%
 }
-
 .images2{
     text-indent: -95%
 }
@@ -152,7 +168,7 @@
 }
 .images12{
     text-indent: -77%;
-}
+} */
 
 .case_item {
     z-index: 3;

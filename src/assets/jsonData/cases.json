@@ -2,36 +2,36 @@
   { 
                 "id": 1, 
                 "case_id": "1",
-                "title":"veeru",
+                "title":"SPACE",
                 "subtitle": "New Subtitle",
                 "brand": "New Brand",
                 "blurb": "default",
                 "award_blurb": "default",
                 "deliverables": "default",
                 "link_url": "default",
-                    "background_url": "plots.jpeg"
+                    "background_url": "space.jpeg"
   },
   {
                     "id": 2,
                     "case_id": "2",
-                    "title": "veeru",
+                    "title": "COMMUNITY",
                     "subtitle": "New Subtitle",
                     "brand": "New Brand",
                     "blurb": "default",
                     "award_blurb": "default",
                     "deliverables": "default",
                     "link_url": "default",
-                    "background_url": "MENDO_Collage_v2.jpg"
+                    "background_url": "community.jpeg"
   },
   {
                     "id": 3,
                     "case_id": "3",
-                    "title": "veeru",
+                    "title": "RESORT",
                     "subtitle": "New Subtitle",
                     "brand": "New Brand",
                     "blurb": "default",
                     "award_blurb": "default",
                     "deliverables": "default",
                     "link_url": "default",
-                    "background_url": "123.jpg"
+                    "background_url": "resort.jpeg"
   }]
